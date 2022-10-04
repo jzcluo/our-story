@@ -3,6 +3,13 @@
     "name": "startbootstrap-grayscale",
     "version": "7.0.5",
     "scripts": {
+        "build": "npm run clean && npm run build:scripts",
+        "build:scripts": "node scripts/build-scripts.js",
+        "clean": "node scripts/clean.js",
+        "start": "npm run build && node scripts/start.js",
+        "start:debug": "npm run build && node scripts/start-debug.js"
+    },
+    "scripts_original": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
         "build:pug": "node scripts/build-pug.js",
@@ -12,6 +19,7 @@
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
+    "main": "index.html",
     "description": "A grayscale one page HTML theme for Bootstrap.",
     "keywords": [
         "css",
